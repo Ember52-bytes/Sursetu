@@ -1,0 +1,29 @@
+﻿ID,Hindi,Santali_OlChiki,Santali_Devanagari,English,Phonetic,Category
+1,नमस्ते,ᱡᱚᱦᱟᱨ,जोहार,Hello / Greetings,Johar,Greetings
+2,सबको जोहार,ᱥᱟᱱᱟᱢ ᱠᱚ ᱡᱚᱦᱟᱨ,सनाम को जोहार,Greetings to everyone,Sanam ko johar,Greetings
+3,धन्यवाद,ᱥᱟᱨᱦᱟᱣ,सरहाव,Thank you,Sarhao,Greetings
+4,स्वागत है,ᱥᱟᱹᱜᱩᱱ ᱫᱟᱨᱟᱢ,सगुन दाराम,Welcome,Sagun daram,Greetings
+5,शुभ प्रभात,ᱥᱟᱹᱜᱩᱱ ᱥᱮᱛᱟᱜ,सगुन सेताग,Good Morning,Sagun setag,Greetings
+6,शिक्षक,ᱢᱟᱪᱮᱛ,माचेत,Teacher (Male),Machet,School
+7,शिक्षिका,ᱢᱟᱪᱮᱛᱟᱹᱱᱤ,माचेतनि,Teacher (Female),Machetnin,School
+8,छात्र,ᱪᱮᱛᱮᱫᱤᱭᱟᱹ,चेतेदिया,Student,Cetedya,School
+9,स्कूल,ᱤᱛᱩᱱ ᱟᱥᱲᱟ,इतुक असड़ा,School,Itun asra,School
+10,किताब,ᱯᱩᱛᱷᱤ,पुथि,Book,Puthi,School
+11,कलम,ᱠᱚᱞᱚᱢ,कलम,Pen,Kolom,School
+12,कापी,ᱚᱞ ᱯᱩᱛᱷᱤ,अल पुथि,Notebook,Ol puthi,School
+13,गणित,ᱞᱮᱠᱷᱟ,लेखा,Mathematics,Lekha,School
+14,भाषा,ᱯᱟᱹᱨᱥᱤ,परसि,Language,Parsi,School
+15,पानी,ᱫᱟᱜ,दाग,Water,Dag,Nature
+16,सूरज,ᱥᱤᱝ ᱪᱟᱸᱫᱚ,सिंग चांदो,Sun,Sing chando,Nature
+17,चांद,ᱧᱤᱸᱫᱟᱹ ᱪᱟᱸᱫᱚ,निंदा चांदो,Moon,Nyinda chando,Nature
+18,पेड़,ᱫᱟᱨᱮ,दारे,Tree,Dare,Nature
+19,फूल,ᱵᱟᱦᱟ,बाहा,Flower,Baha,Nature
+20,फल,ᱡᱚ,जो,Fruit,Jo,Nature
+21,घर,ᱚᱲᱟᱜ,अड़ाग,Home / House,Orag,Daily
+22,गांव,ᱟᱹᱛᱩ,अतु,Village,Atu,Daily
+23,मां,ᱟᱭᱳ,आयो,Mother,Ayo,Family
+24,पिता,ᱵᱟᱵᱟ,बाबा,Father,Baba,Family
+25,भाई,ᱵᱚᱭᱦᱟ,बोइहा,Brother,Boyha,Family
+26,बहन,ᱢᱤᱥᱤ,मिसि,Sister,Misi,Family
+27,बच्चा,ᱜᱤᱫᱽᱨᱟᱹ,गिद्रा,Child,Gidra,Family
+28,दोस्त,ᱜᱟᱛᱮ,गाते,Friend,Gate,Family

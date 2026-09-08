@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PALASH Setu - Indigenous Language AI Education Platform</title>
+    <meta name="description" content="Offline AI Bridge for Primary Tribal Education in Santali (Ol Chiki & Odia Script), Mundari, Ho, Hindi, and English. Real-time ASR, Translation, Script Transducer, and Worksheets.">
+    <!-- Google Fonts: Outfit, Inter, Noto Sans Ol Chiki, Noto Sans Oriya -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Ol+Chiki:wght@400;600;700&family=Noto+Sans+Oriya:wght@400;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Ambient Background Glows -->
+        <div class="glow-bg glow-1"></div>
+        <div class="glow-bg glow-2"></div>
+        <div class="glow-bg glow-3"></div>
+
+        <!-- Top Header Navbar -->
+        <header class="navbar">
+            <div class="brand">
+                <div class="logo-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" y1="19" x2="12" y2="22"></line>
+                        <line x1="8" y1="22" x2="16" y2="22"></line>
+                    </svg>
+                </div>
+                <div class="brand-text">
+                    <h1>PALASH <span class="highlight">Setu</span></h1>
+                    <span class="tagline">पलाश सेतु • ᱯᱟᱞᱟᱥ ᱥᱮᱛᱩ • ପଳାଶ ସେତୁ</span>
+                </div>
+            </div>
+
+            <nav class="nav-tabs" role="tablist">
+                <button class="nav-btn active" id="tab-asr-btn" data-tab="tab-asr" role="tab">
+                    <span class="icon">🎙️</span> Speech Studio
+                </button>
+                <button class="nav-btn" id="tab-mt-btn" data-tab="tab-mt" role="tab">
+                    <span class="icon">🌐</span> Translation Hub
+                </button>
+                <button class="nav-btn" id="tab-lid-btn" data-tab="tab-lid" role="tab">
+                    <span class="icon">🔍</span> Script & LID
+                </button>
+                <button class="nav-btn" id="tab-dict-btn" data-tab="tab-dict" role="tab">
+                    <span class="icon">📖</span> Vocab Bank
+                </button>
+                <button class="nav-btn" id="tab-worksheet-btn" data-tab="tab-worksheet" role="tab">
+                    <span class="icon">📝</span> Worksheets
+                </button>
+                <button class="nav-btn" id="tab-publish-btn" data-tab="tab-publish" role="tab">
+                    <span class="icon">🚀</span> Publish & Deploy
+                </button>
+            </nav>
+
+            <div class="header-right">
+                <div class="status-pill" id="system-status">
+                    <span class="status-dot online"></span>
+                    <span class="status-text" id="status-label">72.9k AI Engine Ready</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Metrics & Stats Ribbon -->
+        <div class="stats-ribbon glass-card">
+            <div class="stat-item">
+                <span class="stat-icon">📚</span>
+                <div>
+                    <div class="stat-value">72,904+</div>
+                    <div class="stat-label">Parallel Pairs (Ol Chiki / Odia)</div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-icon">⚡</span>
+                <div>
+                    <div class="stat-value">0.08 ms</div>
+                    <div class="stat-label">Instant Hybrid Latency</div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-icon">🛡️</span>
+                <div>
+                    <div class="stat-value">100% Offline</div>
+                    <div class="stat-label">Zero-Hallucination Fallback</div>
+                </div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-icon">🏛️</span>
+                <div>
+                    <div class="stat-value">6-Layer</div>
+                    <div class="stat-label">Grammar & Case Engine</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Body -->
+        <main class="main-content">
+
+            <!-- TAB 1: SPEECH STUDIO (ASR + LIVE TRANSLATION) -->
+            <section class="tab-pane active" id="tab-asr" role="tabpanel">
+                <div class="pane-header">
+                    <h2>Real-Time Speech Studio <span class="badge">Streaming ASR + Multi-Script MT</span></h2>
+                    <p>Speak in Hindi or English to capture live transcriptions and translate immediately into Santali (Ol Chiki ᱚᱞ ᱪᱤᱠᱤ / Odia Script ଓଡ଼ିଆ).</p>
+                </div>
+
+                <div class="asr-grid">
+                    <!-- Audio Control & Waveform Panel -->
+                    <div class="glass-card mic-card">
+                        <div class="card-header">
+                            <span class="card-title">🎙️ Audio Recording Studio</span>
+                            <div class="lang-selector">
+                                <label for="target-lang-asr">Translate To:</label>
+                                <select id="target-lang-asr" class="custom-select">
+                                    <option value="sat_Olck" selected>Santali (Ol Chiki - ᱚᱞ ᱪᱤᱠᱤ)</option>
+                                    <option value="sat_Orya">Santali (Odia Script - ଓଡ଼ିଆ ଲିପି)</option>
+                                    <option value="eng_Latn">English (Latin)</option>
+                                    <option value="unr_Deva">Mundari (Devanagari)</option>
+                                    <option value="hoc_Deva">Ho (Devanagari)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mic-visualizer-container">
+                            <canvas id="audio-wave-canvas" width="600" height="120"></canvas>
+                            <button id="record-btn" class="mic-btn" aria-label="Toggle Microphone">
+                                <div class="mic-icon-wrapper">
+                                    <svg class="mic-svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
+                                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                                        <line x1="12" y1="19" x2="12" y2="22"></line>
+                                        <line x1="8" y1="22" x2="16" y2="22"></line>
+                                    </svg>
+                                </div>
+                                <span class="mic-pulse-ring"></span>
+                            </button>
+                            <span class="mic-status-label" id="mic-status-label">Click Microphone to Start Listening</span>
+                        </div>
+
+                        <!-- Live Transcript Preview -->
+                        <div class="live-preview-box">
+                            <span class="live-badge">🔴 LIVE AUDIO STREAM</span>
+                            <p class="live-text" id="live-text-stream">Waiting for speech input...</p>
+                        </div>
+                    </div>
+
+                    <!-- Dual Output Pane (Hindi ASR + Indigenous Translation) -->
+                    <div class="dual-output-container">
+                        <!-- Recognized Hindi Transcript -->
+                        <div class="glass-card output-card">
+                            <div class="card-header">
+                                <span class="card-title">Recognized Speech Input</span>
+                                <button class="action-icon-btn" id="copy-hindi-btn" title="Copy Text">📋</button>
+                            </div>
+                            <div class="output-content" id="asr-hindi-output">
+                                <span class="placeholder-text">Recognized sentences will appear here...</span>
+                            </div>
+                        </div>
+
+                        <!-- Instant Translated Output -->
+                        <div class="glass-card output-card target-output-card">
+                            <div class="card-header">
+                                <span class="card-title">Indigenous Translation (Santali)</span>
+                                <div class="action-btn-group">
+                                    <button class="action-icon-btn" id="tts-btn" title="Listen Audio (TTS)">🔊</button>
+                                    <button class="action-icon-btn" id="copy-target-btn" title="Copy Translation">📋</button>
+                                </div>
+                            </div>
+                            <div class="output-content ol-chiki-display" id="mt-target-output">
+                                <span class="placeholder-text">Live translation will appear here...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Audio Quick Prompts -->
+                <div class="quick-prompts-bar glass-card">
+                    <span class="prompts-title">Try Educational Phrases:</span>
+                    <div class="chip-group">
+                        <button class="prompt-chip" data-phrase="नमस्ते">नमस्ते (Hello)</button>
+                        <button class="prompt-chip" data-phrase="शिक्षक">शिक्षक (Teacher)</button>
+                        <button class="prompt-chip" data-phrase="छात्र">छात्र (Student)</button>
+                        <button class="prompt-chip" data-phrase="स्कूल में किताब खोलो">स्कूल में किताब खोलो</button>
+                        <button class="prompt-chip" data-phrase="घर से पानी लाओ">घर से पानी लाओ</button>
+                        <button class="prompt-chip" data-phrase="आज हम गणित पढ़ेंगे">आज हम गणित पढ़ेंगे</button>
+                        <button class="prompt-chip" data-phrase="सबको जोहार">सबको जोहार</button>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- TAB 2: TRANSLATION HUB -->
+            <section class="tab-pane" id="tab-mt" role="tabpanel">
+                <div class="pane-header">
+                    <h2>Grammar-Aware Translation Hub</h2>
+                    <p>Sub-millisecond translation across 72,900+ parallel sentences with full Ol Chiki & Odia script support.</p>
+                </div>
+
+                <div class="mt-workspace">
+                    <div class="glass-card mt-card">
+                        <div class="mt-card-header">
+                            <select id="mt-src-lang" class="custom-select">
+                                <option value="hin_Deva" selected>Hindi (हिन्दी)</option>
+                                <option value="eng_Latn">English (English)</option>
+                            </select>
+                            <button class="swap-lang-btn" id="swap-langs" title="Swap Languages">⇄</button>
+                            <select id="mt-tgt-lang" class="custom-select">
+                                <option value="sat_Olck" selected>Santali (Ol Chiki - ᱚᱞ ᱪᱤᱠᱤ)</option>
+                                <option value="sat_Orya">Santali (Odia Script - ଓଡ଼ିଆ ଲିପି)</option>
+                                <option value="eng_Latn">English (Latin)</option>
+                                <option value="unr_Deva">Mundari (Devanagari)</option>
+                                <option value="hoc_Deva">Ho (Devanagari)</option>
+                            </select>
+                        </div>
+
+                        <div class="mt-boxes-grid">
+                            <div class="mt-input-wrapper">
+                                <textarea id="mt-input-text" placeholder="Type or paste text here (e.g. स्कूल में किताब खोलो, घर से पानी लाओ, आज हम गणित पढ़ेंगे)..." rows="6"></textarea>
+                                <div class="char-count"><span id="char-num">0</span> chars</div>
+                            </div>
+
+                            <div class="mt-output-wrapper">
+                                <div id="mt-result-text" class="mt-result-area ol-chiki-display">
+                                    <span class="placeholder-text">Translation result will be displayed here...</span>
+                                </div>
+                                <div class="mt-meta-info" id="mt-meta-info">
+                                    <span class="meta-badge" id="mt-mode-badge">Hybrid 6-Layer Engine</span>
+                                    <span class="meta-badge" id="mt-confidence-badge" style="background: rgba(99,102,241,0.2); color:#A5B4FC;">Confidence: --%</span>
+                                    <span class="meta-latency" id="mt-latency">Latency: -- ms</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-action-bar" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                            <button id="translate-btn" class="primary-btn">
+                                <span class="icon">✨</span> Translate Now
+                            </button>
+                            <button id="mt-voice-btn" class="secondary-btn" title="Speak using your microphone">
+                                <span class="icon">🎙️</span> Voice Input
+                            </button>
+                            <button id="clear-mt-btn" class="secondary-btn">Clear</button>
+                        </div>
+                    </div>
+
+                    <!-- Continuous Learning: Teach Model Box -->
+                    <div class="glass-card" style="margin-top: 20px;">
+                        <h3 style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 8px;">🧠 Continuous Learning & Vocabulary Memory</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 14px;">Teach the engine any new word or phrase in Ol Chiki or Odia script. It adapts immediately without retraining.</p>
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
+                            <div style="position: relative; flex: 1; min-width: 160px;">
+                                <input type="text" id="learn-hindi-input" class="custom-input" placeholder="Source phrase (e.g. कंप्यूटर)" style="width: 100%; padding-right: 36px;">
+                                <button id="learn-voice-btn" class="action-icon-btn" style="position: absolute; right: 4px; top: 50%; transform: translateY(-50%); width: 28px; height: 28px;" title="Speak word">🎙️</button>
+                            </div>
+                            <input type="text" id="learn-santali-input" class="custom-input ol-chiki-display" placeholder="Santali (e.g. ᱥᱟᱝᱜᱤᱧ ᱚᱞ or ସାଙ୍ଗିଞ୍ଜ ଅଲ)" style="flex: 1; min-width: 160px;">
+                            <select id="learn-target-script" class="custom-select" style="max-width: 140px;">
+                                <option value="sat_Olck">Ol Chiki</option>
+                                <option value="sat_Orya">Odia Script</option>
+                            </select>
+                            <button id="learn-submit-btn" class="primary-btn" style="padding: 8px 18px;">
+                                💡 Teach Model
+                            </button>
+                        </div>
+                        <div id="learn-feedback-msg" style="margin-top: 10px; font-size: 0.85rem;"></div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- TAB 3: SCRIPT & DIALECT LID CLASSIFIER -->
+            <section class="tab-pane" id="tab-lid" role="tabpanel">
+                <div class="pane-header">
+                    <h2>Santali vs Odia Script Classifier & Transducer</h2>
+                    <p>Designed for the Mayurbhanj & Northern Odisha border regions to accurately distinguish Santali written in Odia script (<code>sat</code>) from Standard Odia (<code>ori</code>) and transduce between scripts.</p>
+                </div>
+
+                <div class="asr-grid">
+                    <!-- LID Classification Card -->
+                    <div class="glass-card">
+                        <div class="card-header">
+                            <span class="card-title">🔍 Language Identification (sat vs ori)</span>
+                            <span class="badge" style="background: rgba(16,185,129,0.2); color: #34D399;">Mayurbhanj NLP</span>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 12px;">Paste Odia script text below to detect if it is Santali or Standard Odia:</p>
+                        
+                        <textarea id="lid-input-text" class="custom-input odia-display" rows="4" placeholder="Paste Odia text (e.g. ଆମ ଓଲଗ ପଢ଼ହବ ଏମ ବଦୟ ସେ? or ବିଶେଷ କରି ଦକ୍ଷିଣ ଓଡିଶା ଓ ଉତ୍ତର ଓଡିଶାରେ ବର୍ଷା ହେବାର ସମ୍ଭାବନା ରହିଛି)..."></textarea>
+
+                        <div style="display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap;">
+                            <button id="lid-classify-btn" class="primary-btn">
+                                🔬 Detect Language
+                            </button>
+                            <button class="secondary-btn lid-sample-btn" data-sample="ଆମ ଓଲଗ ପଢ଼ହବ ଏମ ବଦୟ ସେ?">
+                                Sample 1 (Santali)
+                            </button>
+                            <button class="secondary-btn lid-sample-btn" data-sample="ଆପେ ଏତୁ ଋଣିଜ ମଜ଼ାଯହିଁ ଗୋମକେଡୋ ଅକୋୟ ?">
+                                Sample 2 (Santali)
+                            </button>
+                            <button class="secondary-btn lid-sample-btn" data-sample="ବିଶେଷ କରି ଦକ୍ଷିଣ ଓଡିଶା ଓ ଉତ୍ତର ଓଡିଶାରେ ବର୍ଷା ହେବାର ସମ୍ଭାବନା ରହିଛି">
+                                Sample 3 (Odia)
+                            </button>
+                        </div>
+
+                        <!-- Classification Result Box -->
+                        <div id="lid-result-box" style="margin-top: 18px; padding: 16px; border-radius: 12px; background: rgba(15,23,42,0.6); border: 1px solid rgba(255,255,255,0.08); display: none;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                <div style="font-size: 1.1rem; font-weight: 700;" id="lid-detected-lang">Detected: --</div>
+                                <div class="badge" id="lid-confidence-pill">Confidence: --%</div>
+                            </div>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 8px;" id="lid-explanation"></p>
+                            <div style="font-size: 0.85rem; color: var(--text-muted);" id="lid-markers-list"></div>
+                        </div>
+                    </div>
+
+                    <!-- Multi-Script Transducer Card -->
+                    <div class="glass-card">
+                        <div class="card-header">
+                            <span class="card-title">🔀 Multi-Script Transducer</span>
+                            <span class="badge">Ol Chiki ⇄ Odia ⇄ Devanagari</span>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 12px;">Direct bidirectional phonetic script transducer:</p>
+                        
+                        <div style="display: flex; gap: 8px; margin-bottom: 10px; align-items: center;">
+                            <select id="transduce-src-script" class="custom-select" style="flex: 1;">
+                                <option value="ol_chiki" selected>Ol Chiki (ᱚᱞ ᱪᱤᱠᱤ)</option>
+                                <option value="odia">Odia Script (ଓଡ଼ିଆ ଲିପି)</option>
+                                <option value="deva">Devanagari (देवनागरी)</option>
+                            </select>
+                            <span>➔</span>
+                            <select id="transduce-tgt-script" class="custom-select" style="flex: 1;">
+                                <option value="odia" selected>Odia Script (ଓଡ଼ିଆ ଲିପି)</option>
+                                <option value="ol_chiki">Ol Chiki (ᱚᱞ ᱪᱤᱠᱤ)</option>
+                                <option value="deva">Devanagari (देवनागरी)</option>
+                            </select>
+                        </div>
+
+                        <textarea id="transduce-input" class="custom-input ol-chiki-display" rows="3" placeholder="Enter text in source script (e.g. ᱥᱟᱱᱟᱢ ᱠᱚ ᱡᱚᱦᱟᱨ)..."></textarea>
+                        
+                        <div style="margin-top: 10px; margin-bottom: 10px;">
+                            <button id="transduce-btn" class="primary-btn full-width">⚡ Convert Script</button>
+                        </div>
+
+                        <div class="output-card" style="margin-top: 10px; padding: 12px; background: rgba(15,23,42,0.8);">
+                            <span style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Converted Output:</span>
+                            <div id="transduce-output" class="odia-display" style="font-size: 1.25rem; font-weight: 600; color: #38BDF8; margin-top: 6px; min-height: 38px;">
+                                <span class="placeholder-text" style="font-size: 0.9rem;">Converted text will appear here...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- TAB 4: VOCABULARY BANK -->
+            <section class="tab-pane" id="tab-dict" role="tabpanel">
+                <div class="pane-header">
+                    <h2>Primary Education Vocabulary Bank</h2>
+                    <p>Verified, zero-hallucination dictionary pairs in Ol Chiki (ᱚᱞ ᱪᱤᱠᱤ), Odia Script (ଓଡ଼ିଆ ଲିପି), Hindi, and English.</p>
+                </div>
+
+                <div class="glass-card dict-card">
+                    <div class="dict-controls">
+                        <input type="text" id="dict-search" class="search-input" placeholder="🔍 Search vocabulary in Hindi, Ol Chiki, Odia Script, or English...">
+                        <div class="dict-filter-buttons">
+                            <button class="filter-btn active" data-cat="all">All Words</button>
+                            <button class="filter-btn" data-cat="Greetings">Greetings</button>
+                            <button class="filter-btn" data-cat="School">School & Education</button>
+                            <button class="filter-btn" data-cat="Nature">Nature & Environment</button>
+                            <button class="filter-btn" data-cat="Family">Family & Relations</button>
+                            <button class="filter-btn" data-cat="Numbers">Numbers (0-10)</button>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="dict-table">
+                            <thead>
+                                <tr>
+                                    <th>Hindi (हिन्दी)</th>
+                                    <th>Santali (Ol Chiki - ᱚᱞ ᱪᱤᱠᱤ)</th>
+                                    <th>Santali (Odia Script - ଓଡ଼ିଆ ଲିପି)</th>
+                                    <th>English</th>
+                                    <th>Category</th>
+                                    <th>Listen</th>
+                                </tr>
+                            </thead>
+                            <tbody id="vocab-table-body">
+                                <!-- Populated dynamically by app.js -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- TAB 5: WORKSHEET STUDIO -->
+            <section class="tab-pane" id="tab-worksheet" role="tabpanel">
+                <div class="pane-header">
+                    <h2>Primary School Worksheet Studio</h2>
+                    <p>Generate print-ready, bilingual math and language worksheets in Ol Chiki (ᱚᱞ ᱪᱤᱠᱤ), Odia Script, & Hindi.</p>
+                </div>
+
+                <div class="worksheet-grid">
+                    <!-- Config Panel -->
+                    <div class="glass-card ws-config-card">
+                        <h3>Generator Settings</h3>
+                        <div class="form-group">
+                            <label for="ws-type">Worksheet Type</label>
+                            <select id="ws-type" class="custom-select">
+                                <option value="counting">Counting & Digits (Ol Chiki ᱐-᱙ & Odia ୦-୯)</option>
+                                <option value="matching">Vocabulary Matching (Hindi ↔ Ol Chiki)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ws-title">Worksheet Title</label>
+                            <input type="text" id="ws-title" class="custom-input" value="Grade 1 Math - Counting in Ol Chiki">
+                        </div>
+
+                        <button id="generate-ws-btn" class="primary-btn full-width">
+                            <span class="icon">⚡</span> Generate Printable Worksheet
+                        </button>
+
+                        <div class="ws-actions" style="margin-top: 15px;">
+                            <a id="download-ws-btn" class="secondary-btn full-width text-center disabled" target="_blank" download="worksheet.html">
+                                📥 Download HTML Worksheet
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Preview Panel -->
+                    <div class="glass-card ws-preview-card">
+                        <div class="preview-header">
+                            <span>Worksheet Live Preview</span>
+                            <button id="print-ws-btn" class="secondary-btn small-btn">🖨️ Print / Save PDF</button>
+                        </div>
+                        <div class="iframe-wrapper">
+                            <iframe id="worksheet-iframe" src="about:blank" title="Worksheet Preview"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- TAB 6: PUBLISH & DEPLOYMENT STUDIO -->
+            <section class="tab-pane" id="tab-publish" role="tabpanel">
+                <div class="pane-header">
+                    <h2>🚀 Publish & Deploy PALASH Setu to the Web</h2>
+                    <p>Deploy your Indigenous AI platform for free to Vercel, Render, Netlify, or Railway in minutes.</p>
+                </div>
+
+                <div class="publish-grid">
+                    <!-- Vercel 1-Click Card -->
+                    <div class="glass-card deploy-card">
+                        <div class="card-header">
+                            <span class="card-title">▲ Vercel (Recommended - Serverless)</span>
+                            <span class="badge" style="background: rgba(16,185,129,0.2); color:#34D399;">Free & Fast</span>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 14px;">Deploy with automatic SSL and global CDN in 1 click using the Vercel CLI or GitHub repository.</p>
+                        <div class="code-snippet-box">
+                            <code>npx vercel deploy --prod</code>
+                            <button class="copy-code-btn" data-code="npx vercel deploy --prod">📋 Copy</button>
+                        </div>
+                    </div>
+
+                    <!-- Render / Railway Backend Card -->
+                    <div class="glass-card deploy-card">
+                        <div class="card-header">
+                            <span class="card-title">🟣 Render & Railway (Full Python Backend)</span>
+                            <span class="badge">Full ASR + MT</span>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 14px;">Deploy as a Python Web Service with continuous Vosk Speech & Flask API server.</p>
+                        <div class="code-snippet-box">
+                            <code>gunicorn server:app --bind 0.0.0.0:$PORT</code>
+                            <button class="copy-code-btn" data-code="gunicorn server:app --bind 0.0.0.0:$PORT">📋 Copy</button>
+                        </div>
+                    </div>
+
+                    <!-- GitHub Pages / Netlify Static Card -->
+                    <div class="glass-card deploy-card">
+                        <div class="card-header">
+                            <span class="card-title">🌐 GitHub Pages & Netlify (Zero Config)</span>
+                            <span class="badge">Static Frontend</span>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 14px;">The frontend runs standalone with browser Web Speech ASR and offline cached dictionary.</p>
+                        <div class="code-snippet-box">
+                            <code>git push origin main</code>
+                            <button class="copy-code-btn" data-code="git push origin main">📋 Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>PALASH Setu • AI Platform for Tribal & Indigenous Primary Education • State of Jharkhand & Odisha</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

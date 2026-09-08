@@ -1,0 +1,356 @@
+{
+  "metadata": {
+    "dataset_name": "PALASH Setu Santali Primary Education Dataset",
+    "version": "1.1.0",
+    "language": "Santali (sat_Olck / sat_Deva / sat_Orya)",
+    "scripts": ["Ol Chiki (ᱚᱞ ᱪᱤᱠᱤ)", "Devanagari (देवनागरी)", "Odia Script (ଓଡ଼ିଆ ଲିପି)"],
+    "license": "CC-BY-4.0",
+    "description": "Zero-hallucination parallel vocabulary and sentence dataset for Santali primary education in Jharkhand & Odisha (Mayurbhanj / Keonjhar)."
+  },
+  "vocabulary": [
+    {
+      "id": 1,
+      "hin": "नमस्ते",
+      "sat_olchiki": "ᱡᱚᱦᱟᱨ",
+      "sat_devanagari": "जोहार",
+      "sat_odia": "ଜୋହାର",
+      "eng": "Hello / Greetings",
+      "phonetic": "Johar",
+      "category": "Greetings"
+    },
+    {
+      "id": 2,
+      "hin": "सबको जोहार",
+      "sat_olchiki": "ᱥᱟᱱᱟᱢ ᱠᱚ ᱡᱚᱦᱟᱨ",
+      "sat_devanagari": "सनाम को जोहार",
+      "sat_odia": "ସାନାମ କୋ ଜୋହାର",
+      "eng": "Greetings to everyone",
+      "phonetic": "Sanam ko johar",
+      "category": "Greetings"
+    },
+    {
+      "id": 3,
+      "hin": "धन्यवाद",
+      "sat_olchiki": "ᱥᱟᱨᱦᱟᱣ",
+      "sat_devanagari": "सरहाव",
+      "sat_odia": "ସାରହାଓ",
+      "eng": "Thank you",
+      "phonetic": "Sarhao",
+      "category": "Greetings"
+    },
+    {
+      "id": 4,
+      "hin": "स्वागत है",
+      "sat_olchiki": "ᱥᱟᱹᱜᱩᱱ ᱫᱟᱨᱟᱢ",
+      "sat_devanagari": "सगुन दाराम",
+      "sat_odia": "ସାଗୁନ ଦାରାମ",
+      "eng": "Welcome",
+      "phonetic": "Sagun daram",
+      "category": "Greetings"
+    },
+    {
+      "id": 5,
+      "hin": "शुभ प्रभात",
+      "sat_olchiki": "ᱥᱟᱹᱜᱩᱱ ᱥᱮᱛᱟᱜ",
+      "sat_devanagari": "सगुन सेताग",
+      "sat_odia": "ସାଗୁନ ସେତାଗ",
+      "eng": "Good Morning",
+      "phonetic": "Sagun setag",
+      "category": "Greetings"
+    },
+    {
+      "id": 6,
+      "hin": "शिक्षक",
+      "sat_olchiki": "ᱢᱟᱪᱮᱛ",
+      "sat_devanagari": "माचेत",
+      "sat_odia": "ମାଚେତ",
+      "eng": "Teacher (Male)",
+      "phonetic": "Machet",
+      "category": "School"
+    },
+    {
+      "id": 7,
+      "hin": "शिक्षिका",
+      "sat_olchiki": "ᱢᱟᱪᱮᱛᱟᱹᱱᱤ",
+      "sat_devanagari": "माचेतनि",
+      "sat_odia": "ମାଚେତନି",
+      "eng": "Teacher (Female)",
+      "phonetic": "Machetnin",
+      "category": "School"
+    },
+    {
+      "id": 8,
+      "hin": "छात्र",
+      "sat_olchiki": "ᱪᱮᱛᱮᱫᱤᱭᱟᱹ",
+      "sat_devanagari": "चेतेदिया",
+      "sat_odia": "ଚେତେଦିୟା",
+      "eng": "Student",
+      "phonetic": "Cetedya",
+      "category": "School"
+    },
+    {
+      "id": 9,
+      "hin": "स्कूल",
+      "sat_olchiki": "ᱤᱛᱩᱱ ᱟᱥᱲᱟ",
+      "sat_devanagari": "इतुक असड़ा",
+      "sat_odia": "ଇତୁନ ଆସଡ଼ା",
+      "eng": "School",
+      "phonetic": "Itun asra",
+      "category": "School"
+    },
+    {
+      "id": 10,
+      "hin": "किताब",
+      "sat_olchiki": "ᱯᱩᱛᱷᱤ",
+      "sat_devanagari": "पुथि",
+      "sat_odia": "ପୁଥି",
+      "eng": "Book",
+      "phonetic": "Puthi",
+      "category": "School"
+    },
+    {
+      "id": 11,
+      "hin": "कलम",
+      "sat_olchiki": "ᱠᱚᱞᱚᱢ",
+      "sat_devanagari": "कलम",
+      "sat_odia": "କଲମ",
+      "eng": "Pen",
+      "phonetic": "Kolom",
+      "category": "School"
+    },
+    {
+      "id": 12,
+      "hin": "कापी",
+      "sat_olchiki": "ᱚᱞ ᱯᱩᱛᱷᱤ",
+      "sat_devanagari": "अल पुथि",
+      "sat_odia": "ଅଲ ପୁଥି",
+      "eng": "Notebook",
+      "phonetic": "Ol puthi",
+      "category": "School"
+    },
+    {
+      "id": 13,
+      "hin": "गणित",
+      "sat_olchiki": "ᱞᱮᱠᱷᱟ",
+      "sat_devanagari": "लेखा",
+      "sat_odia": "ଲେଖା",
+      "eng": "Mathematics",
+      "phonetic": "Lekha",
+      "category": "School"
+    },
+    {
+      "id": 14,
+      "hin": "भाषा",
+      "sat_olchiki": "ᱯᱟᱹᱨᱥᱤ",
+      "sat_devanagari": "परसि",
+      "sat_odia": "ପାର୍ସି",
+      "eng": "Language",
+      "phonetic": "Parsi",
+      "category": "School"
+    },
+    {
+      "id": 15,
+      "hin": "पानी",
+      "sat_olchiki": "ᱫᱟᱜ",
+      "sat_devanagari": "दाग",
+      "sat_odia": "ଦାଗ",
+      "eng": "Water",
+      "phonetic": "Dag",
+      "category": "Nature"
+    },
+    {
+      "id": 16,
+      "hin": "सूरज",
+      "sat_olchiki": "ᱥᱤᱝ ᱪᱟᱸᱫᱚ",
+      "sat_devanagari": "सिंग चांदो",
+      "sat_odia": "ସିଂ ଚାନ୍ଦୋ",
+      "eng": "Sun",
+      "phonetic": "Sing chando",
+      "category": "Nature"
+    },
+    {
+      "id": 17,
+      "hin": "चांद",
+      "sat_olchiki": "ᱧᱤᱸᱫᱟᱹ ᱪᱟᱸᱫᱚ",
+      "sat_devanagari": "निंदा चांदो",
+      "sat_odia": "ଞିନ୍ଦା ଚାନ୍ଦୋ",
+      "eng": "Moon",
+      "phonetic": "Nyinda chando",
+      "category": "Nature"
+    },
+    {
+      "id": 18,
+      "hin": "पेड़",
+      "sat_olchiki": "ᱫᱟᱨᱮ",
+      "sat_devanagari": "दारे",
+      "sat_odia": "ଦାରେ",
+      "eng": "Tree",
+      "phonetic": "Dare",
+      "category": "Nature"
+    },
+    {
+      "id": 19,
+      "hin": "फूल",
+      "sat_olchiki": "ᱵᱟᱦᱟ",
+      "sat_devanagari": "बाहा",
+      "sat_odia": "ବାହା",
+      "eng": "Flower",
+      "phonetic": "Baha",
+      "category": "Nature"
+    },
+    {
+      "id": 20,
+      "hin": "फल",
+      "sat_olchiki": "ᱡᱚ",
+      "sat_devanagari": "जो",
+      "sat_odia": "ଜୋ",
+      "eng": "Fruit",
+      "phonetic": "Jo",
+      "category": "Nature"
+    },
+    {
+      "id": 21,
+      "hin": "घर",
+      "sat_olchiki": "ᱚᱲᱟᱜ",
+      "sat_devanagari": "अड़ाग",
+      "sat_odia": "ଅଡ଼ାଗ",
+      "eng": "Home / House",
+      "phonetic": "Orag",
+      "category": "Daily"
+    },
+    {
+      "id": 22,
+      "hin": "गांव",
+      "sat_olchiki": "ᱟᱹᱛᱩ",
+      "sat_devanagari": "अतु",
+      "sat_odia": "ଆତୁ / ଏତୁ",
+      "eng": "Village",
+      "phonetic": "Atu",
+      "category": "Daily"
+    },
+    {
+      "id": 23,
+      "hin": "मां",
+      "sat_olchiki": "ᱟᱭᱳ",
+      "sat_devanagari": "आयो",
+      "sat_odia": "ଆୟୋ",
+      "eng": "Mother",
+      "phonetic": "Ayo",
+      "category": "Family"
+    },
+    {
+      "id": 24,
+      "hin": "पिता",
+      "sat_olchiki": "ᱵᱟᱵᱟ",
+      "sat_devanagari": "बाबा",
+      "sat_odia": "ବାବା",
+      "eng": "Father",
+      "phonetic": "Baba",
+      "category": "Family"
+    },
+    {
+      "id": 25,
+      "hin": "भाई",
+      "sat_olchiki": "ᱵᱚᱭᱦᱟ",
+      "sat_devanagari": "बोइहा",
+      "sat_odia": "ବୟହା / ବୟହ",
+      "eng": "Brother",
+      "phonetic": "Boyha",
+      "category": "Family"
+    },
+    {
+      "id": 26,
+      "hin": "बहन",
+      "sat_olchiki": "ᱢᱤᱥᱤ",
+      "sat_devanagari": "मिसि",
+      "sat_odia": "ମିସି",
+      "eng": "Sister",
+      "phonetic": "Misi",
+      "category": "Family"
+    },
+    {
+      "id": 27,
+      "hin": "बच्चा",
+      "sat_olchiki": "ᱜᱤᱫᱽᱨᱟᱹ",
+      "sat_devanagari": "गिद्रा",
+      "sat_odia": "ଗିଦ୍ରା",
+      "eng": "Child",
+      "phonetic": "Gidra",
+      "category": "Family"
+    },
+    {
+      "id": 28,
+      "hin": "दोस्त",
+      "sat_olchiki": "ᱜᱟᱛᱮ",
+      "sat_devanagari": "गाते",
+      "sat_odia": "ଗାତେ",
+      "eng": "Friend",
+      "phonetic": "Gate",
+      "category": "Family"
+    }
+  ],
+  "numerals": [
+    {"digit": 0, "ol_chiki": "᱐", "odia": "୦", "name": "Sunyô", "hin": "जीरो / शून्य"},
+    {"digit": 1, "ol_chiki": "᱑", "odia": "୧", "name": "Mid", "hin": "एक"},
+    {"digit": 2, "ol_chiki": "᱒", "odia": "୨", "name": "Bar", "hin": "दो"},
+    {"digit": 3, "ol_chiki": "᱓", "odia": "୩", "name": "Pe", "hin": "तीन"},
+    {"digit": 4, "ol_chiki": "᱔", "odia": "୪", "name": "Pun", "hin": "चार"},
+    {"digit": 5, "ol_chiki": "᱕", "odia": "୫", "name": "Môᱬê", "hin": "पांच"},
+    {"digit": 6, "ol_chiki": "᱖", "odia": "୬", "name": "Turui", "hin": "छह"},
+    {"digit": 7, "ol_chiki": "᱗", "odia": "୭", "name": "Êyaê", "hin": "सात"},
+    {"digit": 8, "ol_chiki": "᱘", "odia": "୮", "name": "Irăl", "hin": "आठ"},
+    {"digit": 9, "ol_chiki": "᱙", "odia": "୯", "name": "Are", "hin": "नौ"},
+    {"digit": 10, "ol_chiki": "᱑᱐", "odia": "୧୦", "name": "Gel", "hin": "दस"}
+  ],
+  "parallel_sentences": [
+    {
+      "id": 1,
+      "hin": "सबको जोहार।",
+      "sat_olchiki": "ᱥᱟᱱᱟᱢ ᱠᱚ ᱡᱚᱦᱟᱨ᱾",
+      "sat_odia": "ସାନାମ କୋ ଜୋହାର ।",
+      "eng": "Greetings to everyone."
+    },
+    {
+      "id": 2,
+      "hin": "आज हम गणित पढ़ेंगे।",
+      "sat_olchiki": "ᱛᱮᱦᱮᱧ ᱵᱚᱱ ᱞᱮᱠᱷᱟ ᱵᱚᱱ ᱯᱟᱲᱦᱟᱣᱟ᱾",
+      "sat_odia": "ତେହେଞ୍ଜ ବୋନ ଲେଖା ବୋନ ପାଡ଼ହାୱା ।",
+      "eng": "Today we will study mathematics."
+    },
+    {
+      "id": 3,
+      "hin": "किताब खोलो।",
+      "sat_olchiki": "ᱯᱩᱛᱷᱤ ᱡᱷᱤᱡᱽ ᱢᱮ᱾",
+      "sat_odia": "ପୁଥି ଝିଜ ମେ ।",
+      "eng": "Open the book."
+    },
+    {
+      "id": 4,
+      "hin": "साफ लिखो।",
+      "sat_olchiki": "ᱥᱟᱯᱷᱟ ᱚᱞ ᱢᱮ᱾",
+      "sat_odia": "ସାଫା ଅଲ ମେ ।",
+      "eng": "Write clearly."
+    },
+    {
+      "id": 5,
+      "hin": "सब बैठ जाओ।",
+      "sat_olchiki": "ᱥᱟᱱᱟᱢ ᱠᱚ ᱫᱩᱲᱩᱵ ᱯᱮ᱾",
+      "sat_odia": "ସାନାମ କୋ ଦୁଡ଼ୁବ ପେ ।",
+      "eng": "Everyone please sit down."
+    },
+    {
+      "id": 6,
+      "hin": "क्या आप पढ़ना लिखना जानते हैं?",
+      "sat_olchiki": "ᱟᱢ ᱚᱞ ᱯᱟᱲᱦᱟᱣ ᱮᱢ ᱵᱟᱰᱟᱭᱟ ᱥᱮ?",
+      "sat_odia": "ଆମ ଓଲଗ ପଢ଼ହବ ଏମ ବଦୟ ସେ?",
+      "eng": "Do you know how to read and write ?"
+    },
+    {
+      "id": 7,
+      "hin": "क्या सब कुशल मंगल है?",
+      "sat_olchiki": "ᱥᱟᱱᱟᱢᱟᱜ ᱱᱟᱯᱟᱭ ᱜᱮ ᱛᱚ?",
+      "sat_odia": "ସାନଅମଗ ନପାୟ ଗେଟୋ?",
+      "eng": "Are you fine ?"
+    }
+  ]
+}
